@@ -22,6 +22,10 @@
 			<span id="reset">Clear</span>
 		</div>
 		<div class="h2-bin">
+			<h2>Groups</h2>
+			<span id="reset">Clear</span>
+		</div>
+		<div class="h2-bin">
 			<h2>Injections</h2>
 			<span id="reset">Clear</span>
 		</div>
@@ -74,7 +78,7 @@
 					<span class="sec-head">Host</span>
 					<span class="add" id="inv">+</span>
 					<span class="remove" id="inv">-</span>
-					<div class="field">
+					<div class="field add-item">
 						<select name="strains" required>
 							<option value="" disabled selected>Strain</option>
 							<option value="b6">B6</option>
@@ -92,15 +96,14 @@
 						</select>
 					</div>
 					<div class="field">
-						<span>Number</span>
-						<input type="number" name="host-number" value="100"><br>
+						<input type="text" placeholder= "Number" name="host-number" required onfocus="this.placeholder=''; this.type='number';" onblur="this.placeholder='Number'"><br>
 					</div>
 				</div>
 				<div class="field third-horiz-left">
 					<span class="sec-head">Donor</span>
 					<span class="add" id="inv">+</span>
 					<span class="remove" id="inv">-</span>
-					<div class="field">
+					<div class="field add-item">
 						<select name="strains" required>
 							<option value="" disabled selected>Strain</option>
 							<option value="b6">B6</option>
@@ -110,7 +113,7 @@
 							<option value="other">Other</option>
 						</select>
 					</div>
-					<div class="field">
+					<div class="field add-item">
 						<select name="gender-donor" required>
 							<option value="" disabled selected>Sex</option>
 							<option value="female">Female</option>
@@ -122,22 +125,22 @@
 					<span class="sec-head">Conditioning</span>
 					<span class="add" id="inv">+</span>
 					<span class="remove" id="inv">-</span>
-					<div class="field">
-					<select name="regimen" required>
-						<option value="" disabled selected>Type</option>
-						<option value="radiation">Radiation</option>
-						<option value="chemo">Chemotherapy</option> 
-					</select>
+					<div class="field add-item">
+						<select name="regimen" required>
+							<option value="" disabled selected>Type</option>
+							<option value="radiation">Radiation</option>
+							<option value="chemo">Chemotherapy</option> 
+						</select>
 					</div>
-					<div class="field">
-					<input type="radio" name="repeat" value="single">Single</input>
-					<input type="radio" name="repeat" value="split">Split</input> 
+					<div class="field rad-cond">
+						<input type="radio" name="repeat" value="single">Single</input>
+						<input type="radio" name="repeat" value="split">Split</input> 
 				</div>
-				<div class="field">
+				<div class="field rad-cond">
 					<input type="radio" name="adjust" value="adjusted">Adjusted</input>
 					<input type="radio" name="adjust" value="non-adjusted">Non-adjusted</input> 
 				</div>
-				<div class="field">
+				<div class="field rad-cond">
 					<input type="number" name="regimen-dose"> cGy<br>
 				</div>
 				</div>
@@ -189,7 +192,7 @@
 			</div>
 		</form>
 	</div>
-	<script src="js/protocol_form.js"></script>
+	<script src="js/protocol.js"></script>
 </body>
 
 </html>

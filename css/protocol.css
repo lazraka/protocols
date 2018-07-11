@@ -20,7 +20,7 @@ body{
 }
 /*--------------------------------Header Start-------------------------------*/
 .large-container{
-  height:800px;
+  height:900px;
   width:80%;
   /*margin:0 auto;*/
 /*  border-right:1px solid #EAEAEA;
@@ -85,7 +85,7 @@ h1{
 /*--------------------------------Header End-------------------------------*/
 /*--------------------------------Side Start-------------------------------*/
 .headings-side{
-  height:700px;
+  height:800px;
   width:11%;
   float:left;
   text-align:right;
@@ -100,6 +100,7 @@ h1{
   height:25%;
   border-top:0.5px #EAEAEA solid;
   border-bottom:0.5px #EAEAEA solid;
+  letter-spacing: 1px;
 }
 .add,.remove{
   color: #428bca;
@@ -141,7 +142,7 @@ h1{
 form{
 	display:block;
 	width:100%;
-	height:700px;
+	height:800px;
 	font-family:"Arial",sans-serif;
 }
 
@@ -165,7 +166,7 @@ form{
 }
 
 input[type="text"], input[type="date"] {
-  font-size: 16px;
+  font-size: 12px;
   font-family: sans-serif;
   padding:7px;
   display: inline-block;
@@ -174,6 +175,7 @@ input[type="text"], input[type="date"] {
   border:solid 1px #EAEAEA;
   border-radius:1px;
   margin-bottom: 5px;
+  width:130px;
 }
 
 .title-bin{
@@ -216,6 +218,9 @@ h2{
 	height:100px;
 }
 
+.rad-cond{
+  display: none;
+}
 #submit-btn {
   background: #2e2d2c;
   color: #fff;
