@@ -42,17 +42,6 @@
 		<form action="/my-handling-form-page" method="post" id="form">
 			<div class="data-section blue">
 				<div class="half-horiz-left">
-					<div class="title-bin">
-						<div class="row-3">
-							<span class="titles">Investigator</span>
-						</div>
-						<div class="row-3">
-							<span class="titles">Name</span>
-						</div>
-						<div class="row-3">
-							<span class="titles">Date</span>
-						</div>
-					</div>
 					<div class="fields-bin">
 						<div class="row-3">
 							<input type="text" name="initials" placeholder="Initials" required onfocus="this.placeholder=''" onblur="this.placeholder='Initials'"/>
@@ -64,13 +53,12 @@
 							<input type="text" name="bmt-name" placeholder="BMT Name" required onfocus="this.placeholder=''" onblur="this.placeholder='BMT Name'"><br>
 						</div>
 						<div class="row-3">
-							<input type="date" name="date-req"><br>
+							<input type="date" name="date-req" placeholder="Date requested" required onfocus="this.placeholder=''" onblur="this.placeholder='Date requested'"><br>
 						</div>
 					</div>
 				</div>
 				<div class="half-horiz-right" id="purpose">
-					<span class="label">Purpose</span>
-					<input type="text" name="Purpose" required id="purpose" placeholder="Enter Rationale" class="large-field" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Rationale'"><br>
+					<input type="text" name="Purpose" required id="purpose" placeholder="Purpose" class="large-field" onfocus="this.placeholder=''" onblur="this.placeholder='Purpose'"><br>
 				</div>
 			</div>
 			<div class="data-section grey">	
