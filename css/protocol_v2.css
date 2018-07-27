@@ -187,8 +187,8 @@ select {
 select:required:invalid {
   color: gray;
 }
- .number-size{
-  width:110px;
+ .input-size{
+  width:120px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -210,8 +210,4 @@ select:required:invalid {
 
 .checkmark{
   display:block;
-}
-
-.checkmark:first-child{
-  margin-top:10px;
 }
