@@ -18,6 +18,7 @@
 body{
   background-color: #fff;
 }
+
 /*--------------------------------Header Start-------------------------------*/
 .large-container{
   height:900px;
@@ -27,8 +28,8 @@ body{
   border-left:1px solid #EAEAEA;*/
   background-color: #fff;
   float:left;
-
 }
+
 header{
   background-color: white;
   height:50px;
@@ -37,15 +38,12 @@ header{
   padding-top: 10px;
   padding-left:30px;
   padding-right:30px;
-  /*border: solid black 0.5px;*/
-  /*width:50%;*/
 }
 
 h1{
   font-size: 30px;
   letter-spacing: 0.04em;
   font-family: sans-serif;
-  /*display:inline-block;*/
   display:block;
   float:left;
 }
@@ -66,7 +64,6 @@ h1{
 #reset{
   background-color: #EAEAEA;
   padding:5px 5px;
-  /*border:#EAEAEA solid 0.5px;*/
   color:#428bca;
   cursor: pointer;
   letter-spacing: 1px;
@@ -148,24 +145,39 @@ form{
 
 .data-section{
 	width:95%;
-	height:25%;
-  padding: 8px 20px;
+	height:150px;
+  padding: 5px 20px;
   margin: 1px auto 1px;
 }
-.data-section:first-child{
-  padding-top: 15px;
-}
 
-.blue{
+.gray{
   background-color: #f7f7f7;
   border-top:0.5px #EAEAEA solid;
   border-bottom:0.5px #EAEAEA solid;
 }
-.grey{
-  /*background-color: #e0e0e0;*/
-}
 
 input[type="text"], input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #f7f7f7;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 40px;
+  font-family: georgia;
+  padding:5px 20px;
+  transition: border-color .35s cubic-bezier(.23,1,.32,1);
+  width: 100%;
+/*  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;*/
+  margin-bottom: 5px;
+/*  width:130px;*/
+  letter-spacing: 0.7px
+}
+.total-num{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -181,7 +193,6 @@ input[type="text"], input[type="date"] {
   width: 100%;
 /*  display: inline-block;
   vertical-align: middle;
-  background-color: #fff;*/
   margin-bottom: 5px;
 /*  width:130px;*/
   letter-spacing: 0.7px
@@ -261,10 +272,10 @@ input[type="submit"]:hover {
 }
 
 select {
-  /*width:30%;*/
+  width:83px;
   height:40px;
   padding:5px 15px;
-  display: block;
+  display: inline-block;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;

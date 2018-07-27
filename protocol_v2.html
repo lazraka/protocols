@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMT Protocols</title>
+	<meta name="description" content="Protocols for transplants">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/protocol_v2.css" />
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Open+Sans:400,600,700|Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500|Work+Sans:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:300,400" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+	<div class="large-container">
+		<header>
+			<h1>Bone Marrow Transplant Protocol</h1>
+			<span id="reset-all">Clear All</span>
+		</header>
+		<div class="data-section">
+			<div class="h2-bin">
+				<h2>Information</h2>
+				<span id="reset">Clear</span>
+			</div>
+			<div class="fields-bin">
+				<div class="row-3">
+					<input type="text" name="initials" placeholder="Investigator Initials" required onfocus="this.placeholder=''" onblur="this.placeholder='Investigator Initials'"/>
+					<span class="add" id="inv">+</span>
+					<span class="remove" id="inv">-</span>
+					<br>
+				</div>
+				<div class="row-3">
+					<input type="date" name="date-req" placeholder="Date requested" required onfocus="this.placeholder=''" onblur="this.placeholder='Date requested'"><br>
+				</div>
+			</div>
+			<div class="fields-bin">
+				<div class="row-3">
+					<input type="text" name="bmt-name" placeholder="BMT Name" required onfocus="this.placeholder=''" onblur="this.placeholder='BMT Name'"><br>
+				</div>
+				<div>
+					<input type="text" name="Purpose" required id="purpose large-field" placeholder="Purpose" class="large-field" onfocus="this.placeholder=''" onblur="this.placeholder='Purpose'"><br>
+				</div>
+			</div>
+		</div>
+		<div class="data-section">
+			<div class="h2-bin">
+				<h2>Model</h2>
+				<span id="reset">Clear</span>
+			</div>
+			<div class="fields-bin">
+				<span class="sec-head">Host</span>
+				<span class="add" id="inv">+</span>
+				<span class="remove" id="inv">-</span>
+				<div>
+					<select name="strains" required>
+						<option value="" disabled selected>Strain</option>
+						<option value="b6">B6</option>
+						<option value="balb">Balb/c</option> 
+						<option value="129">129</option>
+						<option value="ly51">Ly5.1</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+				<div>
+					<select name="gender-host" required>
+						<option value="" disabled selected>Sex</option>
+						<option value="female">Female</option>
+						<option value="male">Male</option> 
+					</select>
+				</div>
+				<div>
+					<input type="text" placeholder= "Number" name="host-number" class="number-size" required onfocus="this.placeholder=''; this.type='number';" onblur="this.placeholder='Number'"><br>
+				</div>
+			</div>
+			<div class="fields-bin">
+				<span class="sec-head">Donor</span>
+				<span class="add" id="inv">+</span>
+				<span class="remove" id="inv">-</span>
+				<div>
+					<select name="strains" required>
+						<option value="" disabled selected>Strain</option>
+						<option value="b6">B6</option>
+						<option value="balb">Balb/c</option> 
+						<option value="129">129</option>
+						<option value="ly51">Ly5.1</option>
+						<option value="other">Other</option>
+					</select>
+				</div>
+				<div>
+					<select name="gender-donor" required>
+						<option value="" disabled selected>Sex</option>
+						<option value="female">Female</option>
+						<option value="male">Male</option> 
+					</select>
+				</div>
+			</div>
+			<div class="fields-bin">
+				<span class="sec-head">Conditioning</span>
+				<span class="add" id="inv">+</span>
+				<span class="remove" id="inv">-</span>
+				<div>
+					<select name="regimen" required>
+						<option value="" disabled selected>Type</option>
+						<option value="radiation">Radiation</option>
+						<option value="chemo">Chemotherapy</option> 
+					</select>
+				</div>
+				<div class="rad-cond">
+					<input type="radio" name="repeat" value="single">Single</>
+					<input type="radio" name="repeat" value="split">Split</> 
+				</div>
+				<div class="rad-cond">
+					<input type="radio" name="adjust" value="adjusted">Adjusted</>
+					<input type="radio" name="adjust" value="non-adjusted">Non-adjusted</> 
+				</div>
+				<div class="rad-cond">
+					<input type="number" name="regimen-dose"> cGy<br>
+				</div>
+			</div>
+			<div class="fields-bin">
+				<span class="sec-head">BM/T Injections</span>
+				<div>
+					<select name="inj-route" required>
+						<option value="" disabled selected>Route</option>
+						<option value="route">Tail-vein</option>
+						<option value="route">Retro-orbital</option> 
+					</select>
+				</div>
+			</div>
+			<div class="fields-bin">
+				<span class="sec-head">Follow-up</span>
+				<div class="checkmark" style="margin-top: 8px;">
+					<input type="checkbox" name="exp-for" value="scoring">
+					<label for="scoring">Scoring</label><br><br>
+				</div>
+				<div class="checkmark">
+					<input type="checkbox" name="exp-for" value="survival">
+					<label for="survival">Survival</label><br><br>
+				</div>
+				<div class="checkmark">
+					<input type="checkbox" name="exp-for" value="harvest">
+					<label for="harvest">Harvest</label>
+				</div>
+			</div>
+	</div>
+</body>
