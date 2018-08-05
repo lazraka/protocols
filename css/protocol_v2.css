@@ -139,6 +139,10 @@ input[type="text"], input[type="date"], label {
   letter-spacing: 0.7px;
 }
 
+input:focus, select:focus{
+  outline:solid #cd0562 1px;
+}
+
 .add,.remove{
   color: #33b4b7;
   font-size:20px;
@@ -152,6 +156,8 @@ input[type="text"], input[type="date"], label {
 
 #purpose,#comments{
   display:block;
+  width:400px;
+  height:80px;
 }
 
 #purpose span, #comments span{
@@ -159,10 +165,6 @@ input[type="text"], input[type="date"], label {
   margin-bottom: 10px;
 }
 
-#large-field{
-  width:80%;
-  height:100px;
-}
 /*--------------------------------Model Start-------------------------------*/
 .sec-head {
   display: inline-block;

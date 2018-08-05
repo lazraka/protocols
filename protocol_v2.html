@@ -19,249 +19,273 @@
 			<h1>Bone Marrow Transplant Protocol</h1>
 			<span id="reset-all">Clear All</span>
 		</header>
-		<div class="data-section">
-			<div class="h2-bin">
-				<h2>Information</h2>
-				<span id="reset">Clear</span>
+		<form action="/my-handling-form-page" method="post" id="form">
+			<div class="data-section" id="information">
+				<div class="h2-bin">
+					<h2>Information</h2>
+					<span id="reset">Clear</span>
+				</div>
+				<div class="fields-bin">
+					<div class="row-3">
+						<input type="text" name="initials" placeholder="Investigator Initials" required onfocus="this.placeholder=''" onblur="this.placeholder='Investigator Initials'"/>
+						<span class="add" id="inv">+</span>
+						<span class="remove" id="inv">-</span>
+						<br>
+					</div>
+					<div class="row-3">
+						<input type="date" name="date-req" placeholder="Date requested" required style="width:167px;"onfocus="this.placeholder=''" onblur="this.placeholder='Date requested'"><br>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<div class="row-3">
+						<input type="text" name="bmt-name" placeholder="BMT Name" required style="width:400px;" onfocus="this.placeholder=''" onblur="this.placeholder='BMT Name'"><br>
+					</div>
+					<div>
+						<input type="text" name="Purpose" required id="purpose" placeholder="Purpose" onfocus="this.placeholder=''" onblur="this.placeholder='Purpose'"><br>
+					</div>
+				</div>
 			</div>
-			<div class="fields-bin">
-				<div class="row-3">
-					<input type="text" name="initials" placeholder="Investigator Initials" required onfocus="this.placeholder=''" onblur="this.placeholder='Investigator Initials'"/>
+			<div class="data-section" style="height:175px;" id="model">
+				<div class="h2-bin">
+					<h2>Model</h2>
+					<span id="reset">Clear</span>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">Host</span>
 					<span class="add" id="inv">+</span>
 					<span class="remove" id="inv">-</span>
-					<br>
+					<div>
+						<select name="strains" required>
+							<option value="" disabled selected>Strain</option>
+							<option value="b6">B6</option>
+							<option value="balb">Balb/c</option> 
+							<option value="129">129</option>
+							<option value="ly51">Ly5.1</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+					<div>
+						<select name="gender-host" required>
+							<option value="" disabled selected>Sex</option>
+							<option value="female">Female</option>
+							<option value="male">Male</option> 
+						</select>
+					</div>
+					<div>
+						<input type="text" placeholder= "#" name="host-number" class="number-size" required onfocus="this.placeholder='';"" onblur="this.placeholder='#'"><br>
+					</div>
 				</div>
-				<div class="row-3">
-					<input type="date" name="date-req" placeholder="Date requested" required onfocus="this.placeholder=''" onblur="this.placeholder='Date requested'"><br>
+				<div class="fields-bin">
+					<span class="sec-head">BM Donor</span>
+					<span class="add" id="inv">+</span>
+					<span class="remove" id="inv">-</span>
+					<div>
+						<select name="strains" required>
+							<option value="" disabled selected>Strain</option>
+							<option value="b6">B6</option>
+							<option value="balb">Balb/c</option> 
+							<option value="129">129</option>
+							<option value="ly51">Ly5.1</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+					<div>
+						<select name="gender-donor" required>
+							<option value="" disabled selected>Sex</option>
+							<option value="female">Female</option>
+							<option value="male">Male</option> 
+						</select>
+					</div>
+					<div>
+						<select name="processing" required>
+							<option value="" disabled selected>Type</option>
+							<option value="tcd">TCD</option>
+							<option value="wbm">WBM</option> 
+							<option value="sorted">Sorted</option>
+						</select>
+					</div>
 				</div>
-			</div>
-			<div class="fields-bin">
-				<div class="row-3">
-					<input type="text" name="bmt-name" placeholder="BMT Name" required onfocus="this.placeholder=''" onblur="this.placeholder='BMT Name'"><br>
+				<div class="fields-bin">
+					<span class="sec-head">T Cell Donor</span>
+					<span class="add" id="inv">+</span>
+					<span class="remove" id="inv">-</span>
+					<div>
+						<select name="strains" required>
+							<option value="" disabled selected>Strain</option>
+							<option value="b6">B6</option>
+							<option value="balb">Balb/c</option> 
+							<option value="129">129</option>
+							<option value="ly51">Ly5.1</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+					<div>
+						<select name="gender-donor" required>
+							<option value="" disabled selected>Sex</option>
+							<option value="female">Female</option>
+							<option value="male">Male</option> 
+						</select>
+					</div>
+					<div>
+						<select name="processing" required>
+							<option value="" disabled selected>Type</option>
+							<option value="cd5">CD5+</option>
+							<option value="pan">Pan T</option> 
+							<option value="cd4-cd8">CD4+/CD8+</option>
+						</select>
+					</div>
 				</div>
-				<div>
-					<input type="text" name="Purpose" required id="purpose large-field" placeholder="Purpose" class="large-field" onfocus="this.placeholder=''" onblur="this.placeholder='Purpose'"><br>
+				<div class="fields-bin">
+					<span class="sec-head">Conditioning</span>
+					<span class="add" id="inv">+</span>
+					<span class="remove" id="inv">-</span>
+					<div>
+						<select name="regimen" required>
+							<option value="" disabled selected>Regimen</option>
+							<option value="radiation">Radiation</option>
+							<option value="chemo">Chemotherapy</option> 
+						</select>
+					</div>
+					<div class="rad-cond">
+						<input type="radio" name="repeat" value="single">Single</>
+						<input type="radio" name="repeat" value="split">Split</> 
+					</div>
+					<div class="rad-cond">
+						<input type="radio" name="adjust" value="adjusted">Adjusted</>
+						<input type="radio" name="adjust" value="non-adjusted">Non-adjusted</> 
+					</div>
+					<div class="rad-cond">
+						<input type="number" name="regimen-dose"> cGy<br>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="data-section" style="height:175px;">
-			<div class="h2-bin">
-				<h2>Model</h2>
-				<span id="reset">Clear</span>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">Host</span>
-				<span class="add" id="inv">+</span>
-				<span class="remove" id="inv">-</span>
-				<div>
-					<select name="strains" required>
-						<option value="" disabled selected>Strain</option>
-						<option value="b6">B6</option>
-						<option value="balb">Balb/c</option> 
-						<option value="129">129</option>
-						<option value="ly51">Ly5.1</option>
-						<option value="other">Other</option>
-					</select>
+				<div class="fields-bin">
+					<span class="sec-head">Injections</span>
+					<span class="add" id="inv">+</span>
+					<span class="remove" id="inv">-</span>
+					<div>
+						<select name="inj-route" required>
+							<option value="" disabled selected>Route</option>
+							<option value="route">Tail-vein</option>
+							<option value="route">Retro-orbital</option> 
+						</select>
+					</div>
 				</div>
-				<div>
-					<select name="gender-host" required>
-						<option value="" disabled selected>Sex</option>
-						<option value="female">Female</option>
-						<option value="male">Male</option> 
-					</select>
-				</div>
-				<div>
-					<input type="text" placeholder= "Number" name="host-number" class="input-size" required onfocus="this.placeholder=''; this.type='number';" onblur="this.placeholder='Number'"><br>
-				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">BM Donor</span>
-				<span class="add" id="inv">+</span>
-				<span class="remove" id="inv">-</span>
-				<div>
-					<select name="strains" required>
-						<option value="" disabled selected>Strain</option>
-						<option value="b6">B6</option>
-						<option value="balb">Balb/c</option> 
-						<option value="129">129</option>
-						<option value="ly51">Ly5.1</option>
-						<option value="other">Other</option>
-					</select>
-				</div>
-				<div>
-					<select name="gender-donor" required>
-						<option value="" disabled selected>Sex</option>
-						<option value="female">Female</option>
-						<option value="male">Male</option> 
-					</select>
-				</div>
-				<div>
-					<select name="processing" required>
-						<option value="" disabled selected>Type</option>
-						<option value="tcd">TCD</option>
-						<option value="wbm">WBM</option> 
-						<option value="sorted">Sorted</option>
-					</select>
-				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">T Cell Donor</span>
-				<span class="add" id="inv">+</span>
-				<span class="remove" id="inv">-</span>
-				<div>
-					<select name="strains" required>
-						<option value="" disabled selected>Strain</option>
-						<option value="b6">B6</option>
-						<option value="balb">Balb/c</option> 
-						<option value="129">129</option>
-						<option value="ly51">Ly5.1</option>
-						<option value="other">Other</option>
-					</select>
-				</div>
-				<div>
-					<select name="gender-donor" required>
-						<option value="" disabled selected>Sex</option>
-						<option value="female">Female</option>
-						<option value="male">Male</option> 
-					</select>
-				</div>
-				<div>
-					<select name="processing" required>
-						<option value="" disabled selected>Type</option>
-						<option value="cd5">CD5+</option>
-						<option value="pan">Pan T</option> 
-						<option value="cd4-cd8">CD4+/CD8+</option>
-					</select>
-				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">Conditioning</span>
-				<span class="add" id="inv">+</span>
-				<span class="remove" id="inv">-</span>
-				<div>
-					<select name="regimen" required>
-						<option value="" disabled selected>Regimen</option>
-						<option value="radiation">Radiation</option>
-						<option value="chemo">Chemotherapy</option> 
-					</select>
-				</div>
-				<div class="rad-cond">
-					<input type="radio" name="repeat" value="single">Single</>
-					<input type="radio" name="repeat" value="split">Split</> 
-				</div>
-				<div class="rad-cond">
-					<input type="radio" name="adjust" value="adjusted">Adjusted</>
-					<input type="radio" name="adjust" value="non-adjusted">Non-adjusted</> 
-				</div>
-				<div class="rad-cond">
-					<input type="number" name="regimen-dose"> cGy<br>
-				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">BM/T Injections</span>
-				<div>
-					<select name="inj-route" required>
-						<option value="" disabled selected>Route</option>
-						<option value="route">Tail-vein</option>
-						<option value="route">Retro-orbital</option> 
-					</select>
+				<div class="fields-bin">
+					<span class="sec-head">Follow-up</span>
+					<div class="checkmark" style="margin-top: 8px;">
+						<input type="checkbox" name="exp-for" value="scoring">
+						<label for="scoring">Scoring</label><br><br>
+					</div>
+					<div class="checkmark">
+						<input type="checkbox" name="exp-for" value="survival">
+						<label for="survival">Survival</label><br><br>
+					</div>
+					<div class="checkmark">
+						<input type="checkbox" name="exp-for" value="harvest">
+						<label for="harvest">Harvest</label>
+					</div>
 				</div>
 			</div>
-			<div class="fields-bin">
-				<span class="sec-head">Follow-up</span>
-				<div class="checkmark" style="margin-top: 8px;">
-					<input type="checkbox" name="exp-for" value="scoring">
-					<label for="scoring">Scoring</label><br><br>
+			<div class="data-section" style="height:220px;" id="groups">
+				<div class="h2-bin">
+					<h2>Groups</h2>
+					<span id="reset">Clear</span>
 				</div>
-				<div class="checkmark">
-					<input type="checkbox" name="exp-for" value="survival">
-					<label for="survival">Survival</label><br><br>
+				<div class="fields-bin">
+					<span class="sec-head">Group Name</span>
+					<span class="add" id="inv">+</span>
+					<span class="remove" id="inv">-</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Group 1"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 1'"><br>
+						<input type="text" name="group-names" required placeholder="Group 2"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 2'"><br>
+						<input type="text" name="group-names" required placeholder="Group 3"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 3'"><br>
+						<input type="text" name="group-names" required placeholder="Group 4"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 4'"><br>
+					</div>
 				</div>
-				<div class="checkmark">
-					<input type="checkbox" name="exp-for" value="harvest">
-					<label for="harvest">Harvest</label>
+				<div class="fields-bin">
+					<span class="sec-head">Host</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Host Mice" class="input-size"  onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="data-section">
-			<div class="h2-bin">
-				<h2>Groups</h2>
-				<span id="reset">Clear</span>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">Group Name</span>
-				<span class="add" id="inv">+</span>
-				<span class="remove" id="inv">-</span>
-				<div>
-					<input type="text" name="group-names" required placeholder="Group 1"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 1'"><br>
-					<input type="text" name="group-names" required placeholder="Group 2"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 2'"><br>
-					<input type="text" name="group-names" required placeholder="Group 3"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 3'"><br>
-					<input type="text" name="group-names" required placeholder="Group 4"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 4'"><br>
+				<div class="fields-bin">
+					<span class="sec-head">Host #</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
+						<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
+						<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
+						<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
+					</div>
 				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">Host</span>
-				<div>
-					<input type="text" name="group-names" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
-					<input type="text" name="group-names" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
-					<input type="text" name="group-names" required placeholder="Host Mice" class="input-size"  onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
-					<input type="text" name="group-names" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
+				<div class="fields-bin">
+					<span class="sec-head">Conditioning</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
+						<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
+						<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
+						<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
+					</div>
 				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">Host #</span>
-				<div>
-					<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
-					<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
-					<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
-					<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
+				<div class="fields-bin">
+					<span class="sec-head">BM Donor</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+					</div>
 				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">Conditioning</span>
-				<div>
-					<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
-					<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
-					<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
-					<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
+				<div class="fields-bin">
+					<span class="sec-head">BM Dose</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+					</div>
 				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">BM Donor</span>
-				<div>
-					<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
-					<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
-					<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
-					<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+				<div class="fields-bin">
+					<span class="sec-head">T cell Donor</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+					</div>
 				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">BM Dose</span>
-				<div>
-					<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
-					<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
-					<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
-					<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
-				</div>
-			</div>
-			<div class="fields-bin">
-				<span class="sec-head">T cell Donor</span>
-				<div>
-					<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
-					<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
-					<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
-					<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+				<div class="fields-bin">
+					<span class="sec-head">T Cell Dose</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+					</div>
 				</div>
 			</div>
-			<div class="fields-bin">
-				<span class="sec-head">T Cell Dose</span>
-				<div>
-					<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
-					<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
-					<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
-					<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+			<div class="data-section" id="additional">
+				<div class="h2-bin">
+					<h2>Additional</h2>
+					<span id="reset">Clear</span>
+				</div>
+				<div class="fields-bin">
+					<div>
+						<select name="additional" class="input-size">
+							<option value="" disabled selected></option>
+							<option value="added">Tumor</option>
+							<option value="added">Antibiotics</option>
+							<option value="added">Do Not Disturb</option>  
+						</select>
+						<span class="add" id="inv">+</span>
+						<span class="remove" id="inv">-</span>
+					</div>
 				</div>
 			</div>
-		</div>
+		</form>
 	</div>
+	<script src="js/protocol.js"></script>
 </body>
+</html>
