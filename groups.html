@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BMT Protocols</title>
+		<meta name="description" content="Protocols for transplants">
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link type="text/css" rel="stylesheet" href="css/protocol_v2.css" />
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Open+Sans:400,600,700|Questrial" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500|Work+Sans:500" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:300,400" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+	<body>
+		<div class="large-container">
+		<header>
+			<h1>Bone Marrow Transplant Protocol</h1>
+			<span id="reset-all">Clear All</span>
+		</header>
+		<form action="/my-handling-form-page" method="post" id="form">
+
+			<div class="data-section" style="height:220px;" id="groups">
+				<div class="h2-bin">
+					<h2>Groups</h2>
+					<span id="reset">Clear</span>
+				</div>
+				<div class="fields-bin-horiz">
+					<div class="sec-head">
+						<span>Group Name
+							<span class="add" id="group">+</span>
+							<span class="remove" id="group">-</span>
+						</span>
+						<span>Host</span>
+						<span>Host #</span>
+						<span>Conditioning</span>
+						<span>BM Donor</span>
+						<span>BM Dose</span>
+						<span>T Cell Donor</span>
+						<span>T Cell Dose</span>
+					</div>
+
+					<div class="add-section">
+						<input type="text" name="group-names" required placeholder="Group 1"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 1'">
+						<input type="text" name="group-host-strain" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'">
+						<input type="text" name="group-host-num" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'">
+						<input type="text" name="group-cond" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'">
+						<input type="text" name="group-donor-strain" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'">
+						<input type="text" name="group-bm-dose" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'">
+						<input type="text" name="group-donor-strain-t" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'">
+						<input type="text" name="group-t-dose" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+					</div>
+				</div>
+			</div>
+		</form>
+		</div>
+		<script src="js/protocol.js"></script>
+	</body>
+</html>
