@@ -67,10 +67,10 @@ h1{
 
 .data-section{
   width:100%;
-  height:150px;
   margin-top:3px;
   border-top:0.5px #EAEAEA solid;
   display:block;
+  overflow: auto;
 }
 /*--------------------------------Side Start-------------------------------*/
 .h2-bin{
@@ -83,7 +83,6 @@ h1{
   font-family: sans-serif;
   padding-top: 2px;
   padding-right: 5px;
-  display: inline-block;
   float: left;
   margin-right: 7px;
 }
@@ -169,8 +168,13 @@ input:focus, select:focus{
 
 /*--------------------------------Model Start-------------------------------*/
 .sec-head {
-  display: inline-block;
+  display:block;
   margin-bottom: 5px;
+  float:left;
+}
+.add-section{
+  border-right: 1px solid gray;
+  float:left;
 }
 
 select {

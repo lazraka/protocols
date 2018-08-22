@@ -15,6 +15,7 @@ $(document).ready(function(){
 		console.log(this.id);
 		addItem=$(this).closest('.fields-bin').find('.add-section').html();
 		console.log(addItem);
-		$(this).closest('.fields-bin').append(addItem);
+		//$(this).closest('.fields-bin').append(addItem); this was to add the items to the parent div
+		$(this).append('<div style="float:left; margin-right:5px;"> '+addItem+'</div>');
 	});
 });
