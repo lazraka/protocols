@@ -22,8 +22,14 @@ $(document).ready(function(){
 	$(".add").on("click",function(){
 		addItem=$(this).closest('.fields-bin').find('.add-section').html();
 		//$(this).closest('.fields-bin').append(addItem); this was to add the items to the parent div
-		$(this).closest('.fields-bin').append('<div style="float:right; margin-right:5px; display:block"> '+addItem+'</div>');
+		$(this).closest('.fields-bin').append('<div style="float:right; margin-right:5px; display:block" class="added"> '+addItem+'</div>');
 		subtract=$(this).closest('.fields-bin').find('.remove');
 		$(subtract).css("display","inline-block");
+	});
+
+	$(".remove").on("click", function(){
+		//remove any field that has been added
+		$(this).closest('.fields-bin').find('.added').remove();
+		$(this).closest('.fields-bin').find('.remove').css("display","none");
 	});
 });
