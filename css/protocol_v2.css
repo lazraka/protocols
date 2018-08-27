@@ -21,7 +21,7 @@ body{
 
 .large-container{
   height:900px;
-  width:90%;
+  width:100%;
   background-color: #fff;
   float:left;
 }
@@ -113,6 +113,7 @@ h2{
   float:left;
   padding-top: 4px;
   margin-right:20px;
+  border-right: 1px solid gray;
 }
 
 .row-3{
@@ -149,6 +150,7 @@ input:focus, select:focus{
   font-size:20px;
   cursor: pointer;
   font-family: Helvetica, sans-serif;
+  display:inline-block;
 }
 
 .remove{
@@ -168,12 +170,11 @@ input:focus, select:focus{
 
 /*--------------------------------Model Start-------------------------------*/
 .sec-head {
-  display:block;
-  margin-bottom: 5px;
   float:left;
+  width:100%;
+  margin-bottom: 5px;
 }
 .add-section{
-  border-right: 1px solid gray;
   float:left;
 }
 
