@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMT Protocols</title>
+	<meta name="description" content="Protocols for transplants">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/protocol_v3.css" />
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Open+Sans:400,600,700|Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500|Work+Sans:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:300,400" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+	<div class="large-container">
+		<header>
+			<h1>Bone Marrow Transplant Protocol</h1>
+			<span id="reset-all">Clear All</span>
+		</header>
+		<form action="/my-handling-form-page" method="post" id="form">
+			<div class="data-section" id="information">
+				<div class="h2-bin">
+					<h2>Information</h2>
+					<span id="reset">Clear</span>
+				</div>
+				<div class="fields-bin">
+					<div class="row-3 add-section">
+						<input type="text" name="initials" placeholder="Investigator Initials" required onfocus="this.placeholder=''" onblur="this.placeholder='Investigator Initials'"/>
+						<br>
+					</div>
+					<span class="add" id="inv">+</span>
+					<span class="remove" id="inv">-</span>
+					<div class="row-3">
+						<input type="date" name="date-req" placeholder="Date requested" required style="width:167px;"onfocus="this.placeholder=''" onblur="this.placeholder='Date requested'"><br>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<div class="row-3">
+						<input type="text" name="bmt-name" placeholder="BMT Name" required style="width:400px;" onfocus="this.placeholder=''" onblur="this.placeholder='BMT Name'"><br>
+					</div>
+					<div>
+						<input type="text" name="Purpose" required id="purpose" placeholder="Purpose" onfocus="this.placeholder=''" onblur="this.placeholder='Purpose'"><br>
+					</div>
+				</div>
+			</div>
+			<div class="data-section" style="min-height:175px;" id="model">
+				<div class="h2-bin">
+					<h2>Model</h2>
+					<span id="reset">Clear</span>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">Host
+						<span class="add" id="host">+</span>
+						<span class="remove" id="host">-</span>
+					</span>
+					<div class="add-section">
+						<div>
+							<select name="strains" required>
+								<option value="" disabled selected>Strain</option>
+								<option value="b6">B6</option>
+								<option value="balb">Balb/c</option> 
+								<option value="129">129</option>
+								<option value="ly51">Ly5.1</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+						<div>
+							<select name="gender-host" required>
+								<option value="" disabled selected>Sex</option>
+								<option value="female">Female</option>
+								<option value="male">Male</option> 
+							</select>
+						</div>
+						<div>
+							<input type="text" placeholder= "#" name="host-number" class="number-size" required onfocus="this.placeholder='';"" onblur="this.placeholder='#'"><br>
+						</div>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">BM Donor
+						<span class="add" id="bm-donor">+</span>
+						<span class="remove" id="bm-donor">-</span>
+					</span>
+					<div class="add-section">
+						<div>
+							<select name="strains" required>
+								<option value="" disabled selected>Strain</option>
+								<option value="b6">B6</option>
+								<option value="balb">Balb/c</option> 
+								<option value="129">129</option>
+								<option value="ly51">Ly5.1</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+						<div>
+							<select name="gender-donor" required>
+								<option value="" disabled selected>Sex</option>
+								<option value="female">Female</option>
+								<option value="male">Male</option> 
+							</select>
+						</div>
+						<div>
+							<select name="processing" required>
+								<option value="" disabled selected>Type</option>
+								<option value="tcd">TCD</option>
+								<option value="wbm">WBM</option> 
+								<option value="sorted">Sorted</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">T Cell Donor
+						<span class="add" id="t-donor">+</span>
+						<span class="remove" id="t-donor">-</span>
+					</span>
+					<div class="add-section">
+						<div>
+							<select name="strains" required>
+								<option value="" disabled selected>Strain</option>
+								<option value="b6">B6</option>
+								<option value="balb">Balb/c</option> 
+								<option value="129">129</option>
+								<option value="ly51">Ly5.1</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+						<div>
+							<select name="gender-donor" required>
+								<option value="" disabled selected>Sex</option>
+								<option value="female">Female</option>
+								<option value="male">Male</option> 
+							</select>
+						</div>
+						<div>
+							<select name="processing" required>
+								<option value="" disabled selected>Type</option>
+								<option value="cd5">CD5+</option>
+								<option value="pan">Pan T</option> 
+								<option value="cd4-cd8">CD4+/CD8+</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">Conditioning
+						<span class="add" id="condition">+</span>
+						<span class="remove" id="condition">-</span>
+					</span>
+					<div class="add-section">
+						<div>
+							<select name="regimen" required>
+								<option value="" disabled selected>Regimen</option>
+								<option value="radiation">Radiation</option>
+								<option value="chemo">Chemotherapy</option> 
+							</select>
+						</div>
+						<div class="rad-cond">
+							<input type="radio" name="repeat" value="single">Single</>
+							<input type="radio" name="repeat" value="split">Split</> 
+						</div>
+						<div class="rad-cond">
+							<input type="radio" name="adjust" value="adjusted">Adjusted</>
+							<input type="radio" name="adjust" value="non-adjusted">Non-adjusted</> 
+						</div>
+						<div class="rad-cond">
+							<input type="number" name="regimen-dose"> cGy<br>
+						</div>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">Injections
+						<span class="add" id="inj">+</span>
+						<span class="remove" id="inj">-</span>
+					</span>
+					<div class="add-section">
+						<div>
+							<select name="inj-route" required>
+								<option value="" disabled selected>Route</option>
+								<option value="route">Tail-vein</option>
+								<option value="route">Retro-orbital</option> 
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">Follow-up</span>
+					<div class="checkmark" style="margin-top: 8px;">
+						<input type="checkbox" name="exp-for" value="scoring">
+						<label for="scoring">Scoring</label><br><br>
+					</div>
+					<div class="checkmark">
+						<input type="checkbox" name="exp-for" value="survival">
+						<label for="survival">Survival</label><br><br>
+					</div>
+					<div class="checkmark">
+						<input type="checkbox" name="exp-for" value="harvest">
+						<label for="harvest">Harvest</label>
+					</div>
+				</div>
+			</div>
+			<div class="data-section" style="min-height:220px;" id="groups">
+				<div class="h2-bin">
+					<h2>Groups</h2>
+					<span id="reset">Clear</span>
+				</div>
+			
+					<table>
+						<tr>
+							<th>Group Name
+								<span class="add" id="group">+</span></th>
+							<th>Host</th>
+							<th>Host #</th>
+							<th>Conditioning</th>
+							<th>BM Donor</th>
+							<th>BM Dose</th>
+							<th>T Cell Donor</th>
+							<th>T Cell Dose</th>
+						</tr>
+						<tr>
+							<td><input type="text" name="group-names" required placeholder="Group 1"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 1'"/></td>
+							<td><input type="text" name="group-host-strain" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"/></td>
+							<td><input type="text" name="group-host-num" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"/></td>
+							<td><input type="text" name="group-cond" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"></td>
+							<td><input type="text" name="group-donor-strain" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"/></td>
+							<td><input type="text" name="group-bm-dose" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"/></td>
+							<td><input type="text" name="group-donor-strain-t" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"/></td>
+							<td><input type="text" name="group-t-dose" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"/></td>
+						</tr>
+					</table>
+
+				
+				<div class="data-section" id="additional">
+					<div class="h2-bin">
+						<h2>Additional</h2>
+						<span id="reset">Clear</span>
+					</div>
+					<div class="fields-bin">
+						<div class="add-section">
+							<select name="additional" class="input-size">
+								<option value="" disabled selected></option>
+								<option value="added">Tumor</option>
+								<option value="added">Antibiotics</option>
+								<option value="added">Do Not Disturb</option>  
+							</select>
+							<span class="add" id="more">+</span>
+							<span class="remove" id="more">-</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="js/protocol.js"></script>
+</body>
+</html>

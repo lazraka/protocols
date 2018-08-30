@@ -1,7 +1,9 @@
 $(document).ready(function(){
-	//on clicking "Clear All", reset the entire scoresheet
+	//on clicking "Clear All", reset the entire protocol
 	$("#reset-all").on("click",function(){
 		$("#form")[0].reset();
+		$("#form").find(".added").remove()
+		$("#form").find('.remove').css("display","none");
 	});
 	
 	//on clicking clear in each section, reset only appropriate section

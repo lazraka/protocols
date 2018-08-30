@@ -1,0 +1,221 @@
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+body{
+  background-color: #fff;
+}
+
+.large-container{
+  height:900px;
+  width:100%;
+  background-color: #fff;
+  float:left;
+}
+
+/*--------------------------------Header Start-------------------------------*/
+header{
+  background-color: white;
+  height:50px;
+  z-index: 1;
+  padding-top: 10px;
+  padding-left:190px;
+  padding-right:30px;
+}
+
+h1{
+  letter-spacing: 0.04em;
+  display:block;
+  float:left;
+  font: 320 35px/1 sans-serif,monospace;
+  color: #33b4b7;
+}
+
+#reset-all {
+  background-color: #EAEAEA;
+  padding:7px 12px;
+  border:#2e2d2c solid 0.5px;
+  color:#2e2d2c;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  float:right;
+}
+
+#reset-all:hover {
+  background-color: #dd565c;
+  color:#fff;
+}
+/*--------------------------------Header End-------------------------------*/
+/*--------------------------------Form Start-------------------------------*/
+
+.data-section{
+  width:100%;
+  margin-top:3px;
+  border-top:0.5px #EAEAEA solid;
+  display:block;
+  overflow: auto;
+}
+/*--------------------------------Side Start-------------------------------*/
+.h2-bin{
+  text-transform: uppercase;
+  width:14%;
+  letter-spacing: 1px;
+  background-color:#fff;
+  text-align:right;
+  font-family: sans-serif;
+  padding-top: 2px;
+  padding-right: 5px;
+  float: left;
+  margin-right: 7px;
+}
+
+h2{
+  font:300 20px/1.2 Work Sans,sans-serif;
+  color:#2e2d2c;
+  text-transform: uppercase;
+}
+
+#reset{
+  background-color: #EAEAEA;
+  padding:5px 5px;
+  color:#33b4b7;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 8px;
+  font-weight: bold;
+  display:block;
+  width:45px;
+  float:right;
+}
+/*--------------------------------Side End-------------------------------*/
+
+.fields-bin{
+  float:left;
+  padding-top: 4px;
+  margin-right:20px;
+  border-right: 1px solid gray;
+}
+
+.row-3{
+  height:33.333333%;
+  line-height: 200%;
+  vertical-align: middle;
+}
+
+input[type="text"], input[type="date"], label {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  height: 40px;
+  font-family: 'Roboto','Noto Sans',sans-serif;
+  padding:5px 10px;
+  transition: border-color .35s cubic-bezier(.23,1,.32,1);
+  margin-bottom: 5px;
+  margin-right: 20px;
+  letter-spacing: 0.7px;
+  float:left;
+}
+
+input:focus, select:focus{
+  outline:solid #cd0562 1px;
+}
+
+.add,.remove{
+  color: #33b4b7;
+  font-size:20px;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+  display:inline-block;
+}
+
+.remove{
+  display:none;
+}
+
+#purpose,#comments{
+  display:block;
+  width:400px;
+  height:80px;
+}
+
+#purpose span, #comments span{
+  display: block;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------Model Start-------------------------------*/
+.sec-head {
+  float:left;
+  width:100%;
+  margin-bottom: 5px;
+}
+.add-section{
+  float:left;
+}
+
+select {
+  width:83px;
+  height:40px;
+  padding:5px 15px;
+  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius:1px;
+  border:none;
+}
+select:required:invalid {
+  color: gray;
+}
+ .input-size{
+  width:100px;
+ }
+
+.number-size{
+  width:50px;
+}
+
+ .rad-cond{
+  display: none;
+}
+
+.checkmark{
+  display:block;
+}
+
+/*--------------------------------Model End-------------------------------*/
+
+/*--------------------------------Groups Start-------------------------------*/
+table{
+  width:84%;
+  float: left;
+  display: block;
+  table-layout: fixed;
+}

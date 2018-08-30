@@ -20,40 +20,90 @@
 		</header>
 		<form action="/my-handling-form-page" method="post" id="form">
 
-			<div class="data-section" style="height:220px;" id="groups">
-				<div class="h2-bin">
-					<h2>Groups</h2>
-					<span id="reset">Clear</span>
-				</div>
-				<div class="fields-bin-horiz">
-					<div class="sec-head">
-						<span>Group Name
-							<span class="add" id="group">+</span>
-							<span class="remove" id="group">-</span>
-						</span>
-						<span>Host</span>
-						<span>Host #</span>
-						<span>Conditioning</span>
-						<span>BM Donor</span>
-						<span>BM Dose</span>
-						<span>T Cell Donor</span>
-						<span>T Cell Dose</span>
-					</div>
 
-					<div class="add-section">
-						<input type="text" name="group-names" required placeholder="Group 1"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 1'">
-						<input type="text" name="group-host-strain" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'">
-						<input type="text" name="group-host-num" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'">
-						<input type="text" name="group-cond" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'">
-						<input type="text" name="group-donor-strain" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'">
-						<input type="text" name="group-bm-dose" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'">
-						<input type="text" name="group-donor-strain-t" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'">
-						<input type="text" name="group-t-dose" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
-					</div>
-				</div>
-			</div>
 		</form>
 		</div>
 		<script src="js/protocol.js"></script>
 	</body>
 </html>
+
+<div class="data-section" style="height:220px;" id="groups">
+				<div class="h2-bin">
+					<h2>Groups</h2>
+					<span id="reset">Clear</span>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">Group Name</span>
+					<span class="add" id="group">+</span>
+					<span class="remove" id="group">-</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Group 1"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 1'"><br>
+						<input type="text" name="group-names" required placeholder="Group 2"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 2'"><br>
+						<input type="text" name="group-names" required placeholder="Group 3"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 3'"><br>
+						<input type="text" name="group-names" required placeholder="Group 4"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 4'"><br>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">Host</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Host Mice" class="input-size"  onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"><br>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">Host #</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
+						<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
+						<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
+						<input type="text" name="group-names" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"><br>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">Conditioning</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
+						<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
+						<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
+						<input type="text" name="group-names" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"><br>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">BM Donor</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">BM Dose</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">T cell Donor</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+						<input type="text" name="group-names" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"><br>
+					</div>
+				</div>
+				<div class="fields-bin">
+					<span class="sec-head">T Cell Dose</span>
+					<div>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+						<input type="text" name="group-names" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"><br>
+					</div>
+				</div>
+			</div>
