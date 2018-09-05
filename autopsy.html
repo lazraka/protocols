@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mouse Autopsy</title>
+	<meta name="description" content="Autopsy form submission">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/autopsy.css" />
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Open+Sans:400,600,700|Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500|Work+Sans:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:300,400" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="src/jquery.table2excel.js"></script>
+</head>
+<body>
+	<input type="submit" value="No Deaths">
+	<table id="table">
+		<tr>
+			<th>Today's Date</th>
+			<th>Exp Date</th> 
+			<th>Investigator</th>
+			<th>Group #</th>
+			<th>Mouse #</th>
+			<th>Cause of Death</th>
+			<th>Checked by</th>
+			<th>Comments</th>
+		</tr>
+		<tr>
+			<td><input type="date" name="date-today" required placeholder="Today's Date"  onfocus="this.placeholder=''" onblur="this.placeholder='Todays Date'"/></td>
+			<td><input type="date" name="date-transplant" required placeholder="BMT Date"  onfocus="this.placeholder=''" onblur="this.placeholder='BMT Date'"/></td>
+			<td><input type="text" name="investigator" required placeholder="Initials"  onfocus="this.placeholder=''" onblur="this.placeholder='Initials'"/></td>
+			<td><input type="text" name="group-num" required placeholder="Group #"  onfocus="this.placeholder=''" onblur="this.placeholder='Group #'"/></td>
+			<td><input type="text" name="mouse-num" required placeholder="Mouse #"  onfocus="this.placeholder=''" onblur="this.placeholder='Mouse #'"/></td>
+			<td>
+				<select name="death-cause" required>
+					<option value="" disabled selected>Select...</option>
+					<option value="gvhd">GVHD</option>
+					<option value="graft-failure">GF</option> 
+					<option value="tumor">T</option> 
+					<option value="radiation">XRT</option> 
+					<option value="other">Other</option> 
+				</select></td>
+			<td><input type="text" name="checker" required placeholder="Initials"  onfocus="this.placeholder=''" onblur="this.placeholder='Initials'"/></td>
+			<td><input type="text" name="comments" required placeholder="Comments"  onfocus="this.placeholder=''" onblur="this.placeholder='Comments'"/></td>
+		</tr>
+	</table>
+	<input type="submit" value="Submit" id="submit-btn">
+	<script src="js/autopsy.js"></script>
+</body>
+</html>
