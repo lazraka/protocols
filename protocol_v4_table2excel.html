@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMT Protocols</title>
+	<meta name="description" content="Protocols for transplants">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link type="text/css" rel="stylesheet" href="css/protocol_v3.css" />
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|Open+Sans:400,600,700|Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500|Work+Sans:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:300,400" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+	<div class="large-container">
+		<header>
+			<h1>Bone Marrow Transplant Protocol</h1>
+			<span id="reset-all">Clear All</span>
+		</header>
+		<form action="/my-handling-form-page" method="post" id="form">
+			<table id="table-test">
+				<tr>
+					<th rowspan="3">Information</th>
+				</tr>
+				<tr>
+					<td><input type="text" name="initials" placeholder="Investigator Initials" required onfocus="this.placeholder=''" onblur="this.placeholder='Investigator Initials'"/></td>
+					<td><input type="text" name="bmt-name" placeholder="BMT Name" required onfocus="this.placeholder=''" onblur="this.placeholder='BMT Name'"></td>
+				</tr>
+				<tr>
+					<td><input type="date" name="date-req" placeholder="Date requested" required style="width:167px;"onfocus="this.placeholder=''" onblur="this.placeholder='Date requested'"></td>
+					<td><input type="text" name="Purpose" required id="purpose" placeholder="Purpose" onfocus="this.placeholder=''" onblur="this.placeholder='Purpose'"></td>
+				</tr>
+				<tr>
+					<th rowspan="4">Model</th>
+					<th>Host</th>
+					<th>BM Donor</th>
+					<th>T Cell Donor</th>
+					<th>Conditioning</th>
+					<th>Injections</th>
+					<th>Follow up</th>
+				</tr>
+				<tr>
+					<td><select name="strains" required>
+						<option value="" disabled selected>Strain</option>
+						<option value="b6">B6</option>
+						<option value="balb">Balb/c</option> 
+						<option value="129">129</option>
+						<option value="ly51">Ly5.1</option>
+						<option value="lp">LP</option>
+						<option value="other">Other</option>
+					</select></td>
+					<td><select name="strains" required>
+						<option value="" disabled selected>Strain</option>
+						<option value="b6">B6</option>
+						<option value="balb">Balb/c</option> 
+						<option value="129">129</option>
+						<option value="ly51">Ly5.1</option>
+						<option value="lp">LP</option>
+						<option value="other">Other</option>
+					</select></td>
+					<td><select name="strains" required>
+						<option value="" disabled selected>Strain</option>
+						<option value="b6">B6</option>
+						<option value="balb">Balb/c</option> 
+						<option value="129">129</option>
+						<option value="ly51">Ly5.1</option>
+						<option value="lp">LP</option>
+						<option value="other">Other</option>
+					</select></td>
+					<td><select name="regimen" required>
+						<option value="" disabled selected>Regimen</option>
+						<option value="radiation">Radiation</option>
+						<option value="chemo">Chemotherapy</option> 
+					</select></td>
+					<td rowspan="3"><select name="inj-route" required>
+						<option value="" disabled selected>Route</option>
+						<option value="route">Tail-vein</option>
+						<option value="route">Retro-orbital</option> 
+					</select></td>
+					<td><input type="checkbox" name="exp-for" value="scoring">
+						<label for="scoring">Scoring</label></td>
+				</tr>
+				<tr>
+					<td><select name="gender-host" required>
+							<option value="" disabled selected>Sex</option>
+							<option value="female">Female</option>
+							<option value="male">Male</option> 
+						</select></td>
+					<td><select name="gender-host" required>
+							<option value="" disabled selected>Sex</option>
+							<option value="female">Female</option>
+							<option value="male">Male</option> 
+						</select></td>
+					<td><select name="gender-host" required>
+							<option value="" disabled selected>Sex</option>
+							<option value="female">Female</option>
+							<option value="male">Male</option> 
+						</select></td>
+					<td><input type="radio" name="repeat" value="single">Single</>
+						<input type="radio" name="repeat" value="split">Split</></td>
+					<td><input type="checkbox" name="exp-for" value="survival">
+							<label for="survival">Survival</label></td>
+				</tr>
+				<tr>
+					<td><input type="text" placeholder= "#" name="host-number" class="number-size" required onfocus="this.placeholder='';"" onblur="this.placeholder='#'"></td>
+					<td><select name="processing" required>
+							<option value="" disabled selected>Type</option>
+							<option value="tcd">TCD</option>
+							<option value="wbm">WBM</option> 
+							<option value="sorted">Sorted</option>
+						</select></td>
+					<td><select name="processing" required>
+							<option value="" disabled selected>Type</option>
+							<option value="cd5">CD5+</option>
+							<option value="pan">Pan T</option> 
+							<option value="cd4-cd8">CD4+/CD8+</option>
+						</select></td>
+					<td><input type="radio" name="adjust" value="adjusted">Adjusted</>
+						<input type="radio" name="adjust" value="non-adjusted">Non-adjusted</></td>
+					<td><input type="checkbox" name="exp-for" value="harvest">
+							<label for="harvest">Harvest</label></td>
+				</tr>
+				<tr>
+					<th rowspan="2">Groups</th>
+					<th>Group Name
+						<span class="add" id="group">+</span>
+					</th>
+					<th>Host</th>
+					<th>Host #</th>
+					<th>Conditioning</th>
+					<th>BM Donor</th>
+					<th>BM Dose</th>
+					<th>T Cell Donor</th>
+					<th>T Cell Dose</th>
+				</tr>
+				<tr>
+					<td><input type="text" name="group-names" required placeholder="Group 1"  onfocus="this.placeholder=''" onblur="this.placeholder='Group 1'"/></td>
+					<td><input type="text" name="group-host-strain" required placeholder="Host Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Host Mice'"/></td>
+					<td><input type="text" name="group-host-num" required placeholder="#"  class="number-size" onfocus="this.placeholder=''" onblur="this.placeholder='#'"/></td>
+					<td><input type="text" name="group-cond" required placeholder="Regimen"  onfocus="this.placeholder=''" onblur="this.placeholder='Regimen'"></td>
+					<td><input type="text" name="group-donor-strain" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"/></td>
+					<td><input type="text" name="group-bm-dose" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"/></td>
+					<td><input type="text" name="group-donor-strain-t" required placeholder="Donor Mice"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Donor Mice'"/></td>
+					<td><input type="text" name="group-t-dose" required placeholder="Cell #"  class="input-size" onfocus="this.placeholder=''" onblur="this.placeholder='Cell #'"/></td>
+				</tr>
+			</table>
+			<button>Table Test</button>
+		</form>
+	</div>
+	<script src="js/protocol.js"></script>
+	<script src="bower_components\jquery\dist\jquery.min.js"></script>
+	<script src="bower_components\jquery-table2excel\dist\jquery.table2excel.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+</body>
+</html>

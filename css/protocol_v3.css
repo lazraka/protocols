@@ -157,7 +157,7 @@ input:focus, select:focus{
 
 #purpose,#comments{
   display:block;
-  width:400px;
+  width:200px;
   height:80px;
 }
 
